@@ -1,0 +1,7 @@
+.itemGrid {
+	display: grid;
+	grid-gap: 50px 130px;
+	align-content: center;
+	justify-self: center;
+	grid-template-columns: repeat(auto-fill, 186px);
+}
