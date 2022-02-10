@@ -1,0 +1,29 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 210px;
+	min-height: 250px;
+	max-width: 220px;
+	max-height: 300px;
+	border: 6px solid #f9fcb6;
+	border-radius: 40px;
+	background-color: #ffde6c;
+	padding: 8px;
+}
+
+.cardImage {
+	max-width: 200px;
+}
+
+.cardTitle {
+	text-align: center;
+	color:coral;
+	margin: 10px 0;
+}
+
+.cardTypeText {
+	border-radius: 8px;
+	border:2px solid black;
+	padding: 2px;
+}
