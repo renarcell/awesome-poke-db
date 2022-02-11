@@ -15,15 +15,21 @@
 	animation: 1.5s falldown;
 }
 
+.nav-bar * {
+	text-decoration: none;
+}
+
 .logo-wrapper {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	align-self: flex-start;
+	justify-self: flex-start;
 	height: 100%;
 }
 
 img.logo {
-	height: 100%;
+	width: 80px;
 
 	object-fit: contain;
 }
@@ -42,6 +48,7 @@ img.logo {
 }
 
 .logo-text span {
+	color: black;
 	line-height: 22px;
 	display: block;
 }
@@ -54,15 +61,24 @@ ul.menu {
 }
 
 ul.menu li {
+	color: black;
 	display: inline;
 	text-transform: uppercase;
 
+}
+
+ul.menu li:visited {
+	color: black;
 }
 
 ul.menu li:hover {
 	padding-top: 8px;
 	padding-bottom: 4px;
 	border-bottom: 4px solid grey;
+}
+
+.link {
+	color: black;
 }
 
 @keyframes falldown { 

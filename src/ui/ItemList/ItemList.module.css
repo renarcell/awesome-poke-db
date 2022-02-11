@@ -1,0 +1,9 @@
+.itemListGrid {
+	padding: 0;
+	display: grid;
+	grid-gap: 50px 30px;
+	align-items: center;
+	justify-items: center;
+
+	grid-template-columns: repeat(4, 1fr);
+}

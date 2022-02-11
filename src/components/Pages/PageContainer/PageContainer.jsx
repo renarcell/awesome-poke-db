@@ -3,10 +3,12 @@ import './PageContainer.css';
 
 export default function PageContainer(props) {
 	return (
-		<div className="container page-container">
-			{
-				props.chilren
-			}
+		<div className="container">
+			<div className="page-container">
+				{
+					props.children
+				}
+			</div>
 		</div>
 	);
 };
