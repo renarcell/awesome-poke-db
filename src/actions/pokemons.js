@@ -19,8 +19,10 @@ export function FETCH_POKEMONS_FAILURE(error) {
 }
 
 export const loadPokemons = (service) => () => (dispatch) => {
-	dispatch(FETCH_POKEMONS_REQUEST);
-
+	dispatch(FETCH_POKEMONS_REQUEST());
+	service.getPokemons()
+	.then((pokemons) => { dispatch(FETCH_POKEMONS_SUCCESS(pokemons)) })
+	.catch((error) => { dispatch(FETCH_POKEMONS_FAILURE(error)) });
 }
 
 export function INCREASE_POKEMONS_LIMIT() {
