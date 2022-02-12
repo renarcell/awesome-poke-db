@@ -1,0 +1,15 @@
+.Button {
+	display: block;
+	background-color: rgb(255, 37, 37);
+	border: none;
+	border-radius: 8px;
+	padding: 10px 16px;
+	font-size: 20px;
+	color:rgb(255, 240, 37);
+	margin: 0 auto;
+}
+
+.Button:hover {
+	filter: brightness(85%);
+	color: rgb(29, 29, 29);
+}

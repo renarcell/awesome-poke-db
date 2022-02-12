@@ -25,8 +25,9 @@ export const loadPokemons = (service) => () => (dispatch) => {
 	.catch((error) => { dispatch(FETCH_POKEMONS_FAILURE(error)) });
 }
 
-export function INCREASE_POKEMONS_LIMIT() {
+export function INCREASE_POKEMONS_LIMIT(count) {
 	return {
 		type: "INCREASE_POKEMONS_LIMIT",
+		payload: count,
 	}
 }

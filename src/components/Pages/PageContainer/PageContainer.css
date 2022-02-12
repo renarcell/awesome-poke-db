@@ -1,4 +1,5 @@
 .page-container {
+	position: relative;
 	border: 6px solid #f9fcb6;
 	border-radius: 40px;
 	min-height: 80vh;

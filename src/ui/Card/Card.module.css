@@ -20,6 +20,7 @@
 	text-align: center;
 	color:coral;
 	margin: 10px 0;
+	text-transform: capitalize;
 }
 
 .cardTypeText {

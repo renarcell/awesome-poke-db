@@ -6,7 +6,7 @@ export default class Card extends Component {
 		return <img className={style} src={imageUrl} alt="item" />;
 	}
 
-	static Title = ({style = styles.cardTitle, name}) => {
+	static Title = ({style = styles.cardTitle, name, capitalize = true}) => {
 		return <h2 className={style}>{name}</h2>;
 	}
 

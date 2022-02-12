@@ -4,7 +4,7 @@ export default function pokemons(store, action) {
 			items: [],
 			isLoading: null,
 			error: null,
-			limit: null,
+			limit: 12,
 		}
 	}
 	const { pokemons } = store;
@@ -27,7 +27,7 @@ export default function pokemons(store, action) {
 		case "INCREASE_POKEMONS_LIMIT":
 			return {
 				...pokemons,
-				limit: action.payload,
+				limit: pokemons.limit + action.payload,
 			}
 		default:
 			return store;
