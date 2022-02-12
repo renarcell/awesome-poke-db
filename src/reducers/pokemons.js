@@ -4,6 +4,7 @@ export default function pokemons(store, action) {
 			items: [],
 			isLoading: null,
 			error: null,
+			autoload: false,
 			limit: 12,
 		}
 	}
@@ -23,6 +24,11 @@ export default function pokemons(store, action) {
 			return {
 				...pokemons,
 				error: action.payload,
+			}
+		case "START_POKEMONS_AUTOLOAD":
+			return {
+				...pokemons,
+				autoload: true,
 			}
 		case "INCREASE_POKEMONS_LIMIT":
 			return {

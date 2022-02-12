@@ -10,6 +10,7 @@
 	border-radius: 40px;
 	background-color: #ffde6c;
 	padding: 8px;
+	animation: showCard 2s;
 }
 
 .cardImage {
@@ -27,4 +28,13 @@
 	border-radius: 8px;
 	border:2px solid black;
 	padding: 2px;
+}
+
+@keyframes showCard {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

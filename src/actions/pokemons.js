@@ -25,6 +25,12 @@ export const loadPokemons = (service) => () => (dispatch) => {
 	.catch((error) => { dispatch(FETCH_POKEMONS_FAILURE(error)) });
 }
 
+export function START_POKEMONS_AUTOLOAD() {
+	return {
+		type: "START_POKEMONS_AUTOLOAD",
+	}
+}
+
 export function INCREASE_POKEMONS_LIMIT(count) {
 	return {
 		type: "INCREASE_POKEMONS_LIMIT",
