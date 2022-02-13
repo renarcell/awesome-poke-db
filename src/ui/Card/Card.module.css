@@ -10,7 +10,18 @@
 	border-radius: 40px;
 	background-color: #ffde6c;
 	padding: 8px;
-	animation: showCard 2s;
+}
+
+.card:nth-child(4n+1) {
+	animation: showFromLeft 1.5s;
+}
+
+.card:nth-child(4n+4) {
+	animation: showFromRight 1.5s;
+}
+
+.card:nth-child(4n+2), .card:nth-child(4n+3) {
+	animation: cardFlip 1.5s;
 }
 
 .cardImage {
@@ -36,5 +47,38 @@
 	}
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes showFromLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-40px);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes showFromRight {
+	0% {
+		opacity: 0;
+		transform: translateX(40px);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes cardFlip {
+	0% {
+		opacity: 0;
+		transform: rotateY(180deg);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
 	}
 }
