@@ -31,6 +31,12 @@ export function START_POKEMONS_AUTOLOAD() {
 	}
 }
 
+export function STOP_POKEMONS_AUTOLOAD() {
+	return {
+		type: "STOP_POKEMONS_AUTOLOAD",
+	}
+}
+
 export function INCREASE_POKEMONS_LIMIT(count) {
 	return {
 		type: "INCREASE_POKEMONS_LIMIT",

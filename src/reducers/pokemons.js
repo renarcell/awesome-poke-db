@@ -2,6 +2,7 @@ export default function pokemons(store, action) {
 	if (store === undefined) {
 		return {
 			items: [],
+			count: 0,
 			isLoading: null,
 			error: null,
 			autoload: false,
@@ -18,7 +19,8 @@ export default function pokemons(store, action) {
 		case "FETCH_POKEMONS_SUCCESS":
 			return {
 				...pokemons,
-				items: action.payload,
+				items: action.payload.results,
+				count: action.payload.count,
 			}
 		case "FETCH_POKEMONS_FAILURE":
 			return {
@@ -29,6 +31,11 @@ export default function pokemons(store, action) {
 			return {
 				...pokemons,
 				autoload: true,
+			}
+		case "STOP_POKEMONS_AUTOLOAD":
+			return {
+				...pokemons,
+				autoload: false,
 			}
 		case "INCREASE_POKEMONS_LIMIT":
 			return {
