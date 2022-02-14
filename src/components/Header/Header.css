@@ -58,23 +58,36 @@ ul.menu {
 	align-items: center;
 	justify-content: space-around;
 	width: 300px;
+	list-style-type: none;
 }
 
-ul.menu li {
+ul.menu li .link {
 	color: black;
 	display: inline;
 	text-transform: uppercase;
 
 }
 
-ul.menu li:visited {
+ul.menu li .link:visited {
 	color: black;
 }
 
-ul.menu li:hover {
+ul.menu li .link:hover {
 	padding-top: 8px;
 	padding-bottom: 4px;
 	border-bottom: 4px solid grey;
+}
+
+ul.menu li .link.active {
+	padding-top: 8px;
+	padding-bottom: 4px;
+	border-bottom: 4px solid rgb(255, 2, 2);
+}
+
+ul.menu li .active:hover {
+	padding-top: 8px;
+	padding-bottom: 4px;
+	border-bottom: 4px solid rgb(255, 2, 2);
 }
 
 .link {

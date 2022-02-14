@@ -1,9 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 import logo from './logo.png';
 
 export default function Header(props) {
+	function getLinkClasses({isActive}) {
+		return ('link' + (isActive ? ' active' : ''));
+	}
 	return (
 		<header className='header'>
 			<div className="container">
@@ -16,9 +19,9 @@ export default function Header(props) {
 					</Link>
 
 					<ul className="menu">
-						<li><Link to='/pokemons' className='link'>Pokemons</Link></li>
-						<li><Link to='/' className='link'>Items</Link></li>
-						<li><Link to='/' className='link'>Forms</Link></li>
+						<li><NavLink to='/pokemons' className={getLinkClasses}>Pokemons</NavLink></li>
+						<li><NavLink to='/items' className={getLinkClasses}>Items</NavLink></li>
+						<li><NavLink to='/forms' className={getLinkClasses}>Forms</NavLink></li>
 					</ul>
 				</nav>
 			</div>
