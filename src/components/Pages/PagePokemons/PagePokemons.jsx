@@ -10,6 +10,7 @@ import { bindActionCreators } from 'redux';
 import withPokeapiService from '../../../hoc-helpers/withPokeapiService';
 
 function PagePokemonsContainer({pokemons, count, limit, autoload, loadPokemons, increaseLimit, loadMore, stopAutoload }) {
+	console.log(pokemons);
 	const onScroll = useCallback((e) => {
 		if ((window.innerHeight + window.scrollY) > document.body.clientHeight*0.98) {
 			increaseLimit(12);
@@ -17,7 +18,7 @@ function PagePokemonsContainer({pokemons, count, limit, autoload, loadPokemons, 
 	}, [ increaseLimit ]);
 
 	useEffect(() => { 
-		if (!pokemons.length) {
+		if (!pokemons?.length) {
 			loadPokemons();
 		}
 		if (limit >= count) {
@@ -32,7 +33,7 @@ function PagePokemonsContainer({pokemons, count, limit, autoload, loadPokemons, 
 		return () => {
 			document.removeEventListener('scroll', onScroll);
 		}
-	 }, [ loadPokemons, stopAutoload, onScroll, autoload, limit, count, pokemons.length ]);
+	 }, [ loadPokemons, stopAutoload, onScroll, autoload, limit, count, pokemons?.length ]);
 
 	return <PagePokemons pokemons={pokemons} limit={limit} count={count} onLoadMore={() => loadMore(12)}/>;
 }
