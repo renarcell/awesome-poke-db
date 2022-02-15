@@ -13,3 +13,20 @@
 	filter: brightness(85%);
 	color: rgb(29, 29, 29);
 }
+
+.bubbleButton {
+	display: block;
+	border: 6px solid #f9fcb6;
+	border-radius: 40px;
+	font-size: 20px;
+	padding: 10px 16px;
+	transition: all 0.4s;
+	color: white;
+	background-color: #fa7979;
+}
+
+.bubbleButton:hover {
+	transform: scale(1.1);
+	padding: 10px 16px;
+	filter: brightness(1.2);
+}

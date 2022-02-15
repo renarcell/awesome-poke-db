@@ -50,7 +50,7 @@ function PagePokemons({pokemons, count, limit, onLoadMore}) {
 					))
 				}
 			</ItemList>
-			{count > limit && <Button onClick={onLoadMore}/>}
+			{count > limit && <Button onClick={onLoadMore}>Load more</Button>}
 		</PageContainer>
 	);
 }
